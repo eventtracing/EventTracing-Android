@@ -1,0 +1,14 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/option_normal_1"
+        android:icon="@mipmap/ic_launcher"
+        android:title="普通菜单1"
+        app:showAsAction="always"/>
+
+    <item android:id="@+id/option_normal_2"
+        android:icon="@mipmap/ic_launcher"
+        android:title="普通菜单2"
+        app:showAsAction="always"/>
+
+</menu>

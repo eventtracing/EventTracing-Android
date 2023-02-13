@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="key_data_package" type="id" />
+    <item name="key_data_dynamic" type="id" />
+    <item name="key_data_event_params" type="id" />
+    <item name="key_data_callback" type="id" />
+    <item name="key_scroll_id" type="id" />
+</resources>

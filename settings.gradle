@@ -1,0 +1,6 @@
+rootProject.name = "EventTracing-Android"
+include ':app'
+include ':datareport_interface'
+include ':datareport'
+include ':datareport_debug'
+include ':datareport_plugin'

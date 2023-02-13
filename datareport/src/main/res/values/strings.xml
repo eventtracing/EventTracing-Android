@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DataReport</string>
+    <string name="lifecycle_not_matched">检测到 activity[%s].onStop()事件，但没有检测到该activity对应的onStart事件，可能是初始化时机较晚导致，建议放在Application.onCreate中执行初始化，请检查</string>
+</resources>

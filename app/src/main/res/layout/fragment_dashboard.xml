@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.netease.cloudmusic.datareport.demo.com.netease.datareport.demo.dashboard.DashboardFragment">
+
+    <Button
+        android:id="@+id/normal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="基础能力"
+        android:layout_margin="5dp"/>
+
+    <Button
+        android:id="@+id/logical_visible_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="逻辑挂载 ➕ 可见区域"
+        android:layout_margin="5dp"/>
+
+    <Button
+        android:id="@+id/exposure"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="曝光"
+        android:layout_margin="5dp"/>
+
+    <Button
+        android:id="@+id/customEvent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="自定义事件"
+        android:layout_margin="5dp"/>
+
+</LinearLayout>

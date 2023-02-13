@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="datareport_icon_size">16dp</dimen>
+    <dimen name="datareport_icon_text_size">12sp</dimen>
+    <dimen name="datareport_line_width">1dp</dimen>
+    <dimen name="datareport_float_bg_radius">8dp</dimen>
+    <dimen name="datareport_float_height">324dp</dimen>
+    <dimen name="datareport_float_margin">16dp</dimen>
+    <dimen name="datareport_float_item_margin">10dp</dimen>
+    <dimen name="datareport_error_layout_height">500dp</dimen>
+    <dimen name="datareport_event_text_padding_vertical">8dp</dimen>
+    <dimen name="datareport_event_text_padding_horizontal">2dp</dimen>
+    <dimen name="datareport_event_text_bg_radius">10dp</dimen>
+    <dimen name="datareport_event_margin">1dp</dimen>
+    <dimen name="datareport_float_width">200dp</dimen>
+</resources>

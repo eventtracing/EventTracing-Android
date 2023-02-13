@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/test_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试 TextView"
+        android:textSize="40sp"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/test_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="测试 Button"
+        android:textSize="40sp"
+        android:layout_margin="10dp"/>
+
+    <Button
+        android:id="@+id/test_button_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="testButtonClick"
+        android:text="测试 Button 2"
+        android:textSize="40sp"
+        android:layout_margin="10dp"/>
+
+</LinearLayout>

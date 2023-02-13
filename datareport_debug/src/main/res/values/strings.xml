@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="data_report_copy">复制</string>
+    <string name="data_report_function">行功能</string>
+    <string name="data_report_local_data">本地数据</string>
+    <string name="data_report_mark_view">标示对象</string>
+    <string name="data_report_dashboard_close">关闭</string>
+    <string name="data_report_context_info">上下文信息</string>
+
+    <string name="data_report_mark_view_tool">曙光工具</string>
+    <string name="data_report_mark_view_debug_text">对象标识</string>
+
+    <string name="data_report_export_pv">曝光PV</string>
+    <string name="data_report_export_uv">曝光UV</string>
+    <string name="data_report_click_pv">点击PV</string>
+    <string name="data_report_click_uv">点击UV</string>
+    <string name="data_report_slide_pv">滑动PV</string>
+    <string name="data_report_slide_uv">滑动UV</string>
+
+    <string name="data_copy_success">复制成功</string>
+    <string name="data_float_error_text">错误信息</string>
+    <string name="data_report_error_title">Error</string>
+</resources>

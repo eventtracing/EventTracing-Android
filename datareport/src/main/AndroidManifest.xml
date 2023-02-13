@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.netease.cloudmusic.datareport">
+    <application>
+        <provider
+            android:name=".provider.ProcessProvider"
+            android:authorities="${applicationId}.datareport.preferences"
+            android:exported="false"
+            android:multiprocess="false" />
+    </application>
+</manifest>

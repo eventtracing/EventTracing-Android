@@ -1,0 +1,21 @@
+apply plugin: 'groovy'
+apply plugin: 'maven'
+
+sourceCompatibility = JavaVersion.VERSION_1_8
+targetCompatibility = JavaVersion.VERSION_1_8
+
+dependencies {
+    implementation gradleApi()
+    implementation "com.android.tools.build:gradle:${gradle_version}"
+}
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: uri('../repo/'))
+            pom.groupId = MAVEN_GROUP
+            pom.artifactId = MAVEN_PLUGIN_NAME
+            pom.version = MAVEN_PLUGIN_VERSION
+        }
+    }
+}

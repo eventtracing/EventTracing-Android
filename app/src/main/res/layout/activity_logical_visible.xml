@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/top_page"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#33ff0000"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/logical_invisible"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_margin="5dp"
+            android:text="逻辑不可见"
+            />
+
+        <TextView
+            android:id="@+id/virtual_parent_t1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_margin="5dp"
+            android:text="逻辑父节点1"
+            />
+
+        <TextView
+            android:id="@+id/virtual_parent_t2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_margin="5dp"
+            android:text="逻辑父节点2"
+            />
+        <View
+            android:layout_width="1dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/invisible_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"
+            android:layout_margin="5dp"
+            android:text="被遮挡导致不可见"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom_page"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#330000ff"
+        android:layout_marginTop="-50dp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/open_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="20sp"
+            android:layout_marginTop="50dp"
+            android:text="打开浮窗，自己就会被遮挡"
+            />
+
+        <TextView
+            android:id="@+id/logical_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_margin="5dp"
+            android:text="手动逻辑挂载到top_page"
+            />
+        <TextView
+            android:id="@+id/logical_text_auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            android:layout_margin="5dp"
+            android:text="自动逻辑挂载到根页面"
+            />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="data_report_debug_mask">#33000000</color>
+    <color name="data_report_line_bg">#1a000000</color>
+
+    <color name="data_report_float_item_first">#1aff5b5b</color>
+    <color name="data_report_float_item_second">#1aff9e38</color>
+    <color name="data_report_float_item_third">#1a00b894</color>
+    <color name="data_report_float_item_fourth">#1a5d7cff</color>
+
+    <color name="data_report_float_text_first">#ffff5b5b</color>
+    <color name="data_report_float_text_second">#ffff9e38</color>
+    <color name="data_report_float_text_third">#ff00b894</color>
+    <color name="data_report_float_text_fourth">#ff5d7cff</color>
+    <color name="data_report_error_num_bg">#FF3A3A</color>
+
+    <color name="data_report_float_button_text1">#333333</color>
+    <color name="data_report_float_button_text2">#999999</color>
+    <color name="data_report_dashboard_bg">#F5F6F7</color>
+    <color name="data_report_dashboard_item_text_color">#FF3A3A</color>
+    <color name="data_report_event_text_bg">#000000</color>
+</resources>
