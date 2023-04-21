@@ -11,6 +11,7 @@ import com.netease.cloudmusic.datareport.inner.DataReportInner
 import com.netease.cloudmusic.datareport.operator.DataReport
 import com.netease.cloudmusic.datareport.provider.IDynamicParamsProvider
 import com.netease.cloudmusic.datareport.provider.IReferStrategy
+import com.netease.cloudmusic.datareport.provider.IReporter
 import org.json.JSONObject
 
 class DemoApplication : Application() {
@@ -23,10 +24,8 @@ class DemoApplication : Application() {
     private fun initDataReport(context: Application) {
         val hsReferList = HashSet<String>()
         hsReferList.add("FirstReferActivity")
-        DataReport.getInstance().init(DataReportInner.getInstance(), context,
-        Configuration.builder()
+        val config = Configuration.builder()
             .debugMode(true)
-            .setUIDebug(true)
             .defaultDataCollectEnable(true)
             .setAOPScrollEnable(true)
             .setCustomEventPattern("^(_)[a-z]+(?:[-_][a-z]+)*$")
@@ -45,10 +44,16 @@ class DemoApplication : Application() {
                 override fun isActSeqIncrease(event: String?): Boolean {
                     return false
                 }})
-            .provideReporter { event, eventParams -> //所有埋点在这里输出，后面可以改成上报到服务端
-                Log.i("defaultReport", JSONObject(eventParams as Map<String, Any>).toString())
-                DataReportViewer.uploadLog(event, JSONObject(eventParams as Map<String, Any>))
-            }
+            .provideReporter(object: IReporter {
+                override fun report(event: String, eventParams: MutableMap<String, Any>) {
+                    Log.i("defaultReport", JSONObject(eventParams as Map<String, Any>).toString())
+                    DataReportViewer.uploadLog(event, JSONObject(eventParams as Map<String, Any>))
+                }
+                override fun report(event: String, eventParams: JSONObject) {
+                    Log.i("defaultReport", eventParams.toString())
+                    DataReportViewer.uploadLog(event, eventParams)
+                }
+            })
             .provideReferStrategy(object : IReferStrategy {
                 override fun buildScm(params: Map<String, Any>?): Pair<String, Boolean> {
                     return EventTracing.Companion.buildScmByEr(params)
@@ -57,7 +62,8 @@ class DemoApplication : Application() {
                     return 5
                 }})
             .provideHsReferOidList(hsReferList)
-            .build())
+            .build()
+        DataReport.getInstance().init(DataReportInner.getInstance(), context,config)
     }
 
 }

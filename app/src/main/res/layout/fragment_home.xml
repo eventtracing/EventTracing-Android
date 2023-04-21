@@ -32,4 +32,12 @@
         android:text="打开h5页面"
         />
 
+    <Switch
+        android:id="@+id/open_debug"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="打开debug调试工具"
+        />
+
+
 </LinearLayout>

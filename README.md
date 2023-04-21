@@ -1,10 +1,9 @@
-# 曙光 Android SDK
+# core_datareport
 
-隶属于 https://github.com/eventtracing/dawn 项目
+## 介绍
 
-## Example
-参见 [Demo 文档](https://eventtracing.github.io/docs/Demo/Android)
+## 使用
+1
 
-## Use
-
-参见 [SDK详细使用文档](https://eventtracing.github.io/docs/category/Android)
+## 维护人员
+yuyinghao01@crop.netease.com

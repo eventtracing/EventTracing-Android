@@ -220,7 +220,7 @@ class DataReportJsBridge (private val webView: WebView) {
                         }
                     }
                     "multirefers" -> {
-                        refers.put("multirefers", DataReport.getInstance().multiRefer)
+                        refers.put("multirefers", DataReport.getInstance().mutableRefer)
                     }
                     "hsrefer" -> {
                         refers.put("hsrefer", DataReport.getInstance().hsRefer)

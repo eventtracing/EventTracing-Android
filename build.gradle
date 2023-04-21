@@ -1,3 +1,4 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     repositories {
         google()
@@ -7,8 +8,8 @@ buildscript {
         }
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:${gradle_version}"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        classpath "com.android.tools.build:gradle:$gradle.sdk.gradleBuildPlugin"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$gradle.sdk.kotlin_version"
         classpath "com.netease.cloudmusic.plugin:datareport-plugin:1.0.0"
     }
 }

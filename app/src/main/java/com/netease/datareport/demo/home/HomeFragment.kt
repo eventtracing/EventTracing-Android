@@ -6,11 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.CompoundButton
 import android.widget.EditText
+import android.widget.Switch
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.netease.cloudmusic.datareport.debug.ws.DataReportViewer
+import com.netease.cloudmusic.datareport.eventtracing.DataReporter
 import com.netease.cloudmusic.datareport.eventtracing.NodeBuilder
+import com.netease.cloudmusic.datareport.inner.DataReportInner
+import com.netease.cloudmusic.datareport.operator.DataReport
 import com.netease.datareport.demo.R
 import com.netease.datareport.demo.web.WebViewActivity
 
@@ -43,6 +49,14 @@ class HomeFragment : Fragment() {
         NodeBuilder.getNodeBuilder(root).setPageId("home_page").params().putDynamicParams{
             mutableMapOf(Pair("firstKey", "firstParam")) as Map<String, Any>?
         }
+
+        val debugUISwitch = root.findViewById<Switch>(R.id.open_debug)
+
+        debugUISwitch.isChecked = DataReportInner.getInstance().configuration.isDebugUIEnable
+
+        debugUISwitch.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
+            DataReportInner.getInstance().configuration.setDebugUI(isChecked)
+        })
 
         return root
     }

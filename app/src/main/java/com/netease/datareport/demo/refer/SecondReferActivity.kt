@@ -26,7 +26,7 @@ class SecondReferActivity : AppCompatActivity() {
         findViewById<TextView>(R.id.pgstep_text)?.text = DataReport.getInstance().currentPageStep.toString()
         findViewById<TextView>(R.id.multirefers_text)?.apply {
             postDelayed({
-                this.text = DataReport.getInstance().multiRefer
+                this.text = DataReport.getInstance().mutableRefer
             }, 1000)
         }    }
 }

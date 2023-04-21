@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion gradle.sdk.compileSdkVersion
+    buildToolsVersion gradle.sdk.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion gradle.sdk.minSdkVersion
+        targetSdkVersion gradle.sdk.targetSdkVersion
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+
+        releaseGrayTest.initWith(buildTypes.release)
+        debugGrayTest.initWith(buildTypes.debug)
+        releaseTest.initWith(buildTypes.debug)
+    }
+
+    lintOptions {
+        abortOnError false
+        lintConfig file(rootProject.rootDir.path + '/lint.xml')
+    }
+} 
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:${gradle.sdk.kotlin_version}"
+    implementation "androidx.appcompat:appcompat:${gradle.sdk.appcompat}"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+}
